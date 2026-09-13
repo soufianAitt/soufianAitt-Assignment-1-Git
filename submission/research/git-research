@@ -1,1 +1,33 @@
-/
+ل git rebase هو ببساطة جعل commit الاخير من parent branch بيشير عل اول commit ال child branch.. و بذالك لن يكون هناك commit خاص بmerging و هاذا هو الاختلاف بين git merge و git rebase كذاك history يبقى نظيف  بدون كثير من merge commits لي ممكن تلخبط.
+
+
+
+جواب git squash:
+
+الgit squash هو ببساطة command تخلينا ندمج اكثر من commit في commit وحدة.. هو ممكن نوصفو ب git merge ال commits
+
+
+جواب git grep :
+
+ال git grep تخلينا نسيرش بطريقة سريعة على commit معين
+
+
+جواب git  bisect: 
+
+هي كوموند بتخلينا نسيرش اي state احنا نراها سيئة ام جيدة على حسب المستخدم بطريقة جد سريعة باستخدام binary search .. مثلا ممكن نبحث عن مصدر failed tests
+
+
+جواب git shortlog:
+
+بتsummarize ال commits ب author… يعني ممكن تبحث عن pattern و output يكون ملخص عن من عمل commits
+
+
+جواب git worktree:
+
+طريقة تخلينا ن نتعامل مع اكثر من branch في لحظة وحدة و كل branch لها directory معين.. مثلا اذا جاء لينا project manager و قال علينا ان نصلح bug  و احنا مازلنا نطور في feature معينة في feature branchاخرى ..بدل ما نعمل git statsh ممكن ان نعمل git worktree add ../bugfix main نصلح ما نصلحه و بعد ذالك نcommit الشغل و نمسح ال worktree of bugfix.. و نرجع لشغلنا ف feature branch
+
+
+git filter-repo جواب:
+
+مسح بعض الملفات الحساسة من history of commits
+
